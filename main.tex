@@ -1,0 +1,48 @@
+% !Mode:: "TeX:UTF-8"
+\documentclass[type=doctor, openany, pifootnote]{shuthesis}
+% 选项:
+%  type=[master|doctor],            % 必选
+%  secret,                          % 可选 (如果论文需要保密, 这一项需要打开)
+%  pifootnote,                      % 可选（建议打开）
+%  openany|openright,               % 可选 (章首页是右开还是任意开, 默认是右开)
+%  nocolor                          % 提交最终版本时请打开此选项
+\usepackage{pdfpages}
+\usepackage{shuthesis}
+\usepackage{times}
+\usepackage{titlesec}
+\titleformat{\section}
+    {\normalfont\sanhao\bfseries}{\S\thesection}{1em}{}
+\titleformat{\subsection}
+    {\normalfont\large\bfseries}{\S\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+    {\normalfont\large\bfseries}{\S\thesubsection}{1em}{}
+
+\graphicspath{{figures/}}
+
+\begin{document}
+\includepdf[pages={1}]{cover.pdf} 
+
+\frontmatter
+{
+    \hypersetup{linkcolor=black}
+    \tableofcontents
+}
+\include{data/abstract}
+
+\mainmatter
+\include{data/chap01}
+\include{data/chap02}
+\include{data/chap03}
+\include{data/chap04}
+
+\include{data/acknowledgement}
+
+\bibliographystyle{shuthesis}
+\bibliography{reference/refs}
+
+\backmatter
+\begin{appendix}
+\input{data/appendix}
+\end{appendix}
+
+\end{document}

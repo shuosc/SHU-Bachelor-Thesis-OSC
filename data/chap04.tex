@@ -1,0 +1,23 @@
+% !Mode:: "TeX:UTF-8"
+\chapter{参考文献}
+\label{cha:bib}
+参考文献可以直接写在 \texttt{thebibliography} 环境里, 利用 \cs{bibitem} 罗列文献条
+目. 虽然费点功夫, 但是好控制, 各种格式可以自己随意改写.
+
+本模板推荐使用 BIB\TeX, 样式文件为 \texttt{shuthesis.bst}, 基本符合学校的参考文献格
+式. 看看这个例子: 关于书的~\cite{tex1989,algebra2000}, 还有这些 \cite{nikiforov2014,
+BuFanZhou2016:Z-eigenvalues,HuQiShao2013:Cored-Hypergraphs,KangNikiforov2014:Extremal-Problems,
+LinZhou2016:Distance-Spectral,LuMan2016:Small-Spectral-Radius,Nikiforov2017:Symmetric-Spectrum,
+Qi2014:H-Plus-Eigenvalues}.
+
+有时候一些参考文献没有纸质出处, 需要标注 URL. 缺省情况下, URL 不会在连字符处断行,
+这可能使得用连字符代替空格的网址分行很难看. 如果需要, 可以将模板类文件中
+\begin{verbatim}
+\RequirePackage{hyperref}
+\end{verbatim}
+一行改为:
+\begin{verbatim}
+\PassOptionsToPackage{hyphens}{url}
+\RequirePackage{hyperref}
+\end{verbatim}
+使得连字符处可以断行. 更多设置可以参考 \texttt{url} 宏包文档.

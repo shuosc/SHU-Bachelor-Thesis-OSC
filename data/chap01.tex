@@ -1,0 +1,77 @@
+% !Mode:: "TeX:UTF-8"
+\chapter{模板介绍}
+\label{cha:intro}
+
+\section{\shuthesis 模板（本模板的基模板）介绍}
+这是 \shuthesis\ 的示例文档, 基本上覆盖了模板中所有格式的设置. 建议大家在使用模板之
+前, 阅读一下 \texttt{shuthesis.pdf} 文档. \shuthesis\ 已经将 \LaTeX 的复杂性尽可
+能地进行了封装, 开放出简单的接口, 以便于使用者可以轻易地使用.
+
+\shuthesis\ 是为了帮助上海大学毕业生撰写学位论文而编写的 \LaTeX 模板, 模板的开发
+分为两个阶段: 版本 v1.x 是由水寿松制作完成的, 基于 CJK 宏包开发和使用 GBK 编码, 
+可在 \url{http://blog.lehu.shu.edu.cn/shuishousong/A209370.html} 下载. 当前
+版本是 v2.0, 由 ahhylau 制作完成, 基于 XeCJK 宏包开发, 文件使用 UTF-8 编码. 
+\shuthesis\ v2.0 使用文学化编程 (Literate Programming), 利用 \texttt{doc/DocStrip} 
+将代码和说明文档混合编写, 便于以后的升级和维护. 另外, 作者重新制作了上海大学 logo 的
+高清矢量图, 看起来更加美观. 
+
+目前 \shuthesis\ 模板的代码托管在 \href{https://github.com/ahhylau/shuthesis}{GitHub} 
+上, 如有修改建议或者其他要求欢迎在 GitHub 上提交 issue, 作者会尽快回复. 非常期待有其
+他上大的 \TeX\ 使用者加入到模板的开发与维护当中来, 不断完善模板.
+
+本模板是以清华大学学位论文模板 \textsc{ThuThesis} 为基础制作的衍生版, 在此对代码的贡
+献者表示感谢!
+
+\section{\shubachelorthesisOSC\ 模板}
+\shuthesis\ 仅支持硕博论文，后来 \href{https://github.com/alfredbowenfeng}{alfredbowenfeng}
+在\shuthesis\ 的基础上修改出了\shubachelorthesis\ ，然而似乎格式和学习官方给出的版本有多处对不上。
+
+因此，我们在 \href{https://github.com/alfredbowenfeng/SHU-Bachelor-Thesis}{\shubachelorthesis\ } 
+的基础上进一步制作了上海大学本科生毕业论文Latex模板开源社区版本
+\href{https://github.com/EnJiang/SHU-Bachelor-Thesis-OSC}{\shubachelorthesisOSC\ }
+
+
+感谢前面几位同学的工作和开源精神。希望本模板能帮助到本科生同学，希望越来越多的同学能加入到开源社区大家庭。
+
+\section{目录内容}
+模板的源文件即为研究生毕业论文中使用的模板, 用户可以通过修改这些文件来编辑自己的毕业论文.
+\begin{itemize}
+\item{main.tex}: 主文件, 包含封面部分和基本设置.
+\item{data}: 包含本文正文中的所有章节.
+\begin{itemize}
+\item{abstract.tex}: 中英文摘要.
+\item{denotation.tex}: 主要符号对照表.
+\item{chap01.tex}: 第一章内容.
+\item{chap02.tex}: 第二章内容.
+\item{chap03.tex}: 第三章内容.
+\item{chap04.tex}: 第四章内容.
+\item{acknowledgement.tex}: 致谢.
+\item{publications.tex}: 作者在攻读学位期间公开发表的论文.
+\item{appendix.tex}: 附录.
+\end{itemize}
+\item{reference/refs.bib}: 存放论文所引用的全部参考文献信息.
+\item{clean.bat}: 双击此文件, 可以用来清理 main.tex 在编译之后生成的所有缓存文件, 
+如后缀名为~.aux~,~.log~,~.bak~的文件.
+\item{make-doc.bat}: 双击此文件, 一键生成用户手册 \texttt{shuthesis.pdf}.
+\end{itemize}
+
+
+\section{模板使用}
+\label{sec:first}
+
+本模板在 Windows 10 和 \TeX Live 2016 下开发, 所使用的宏包均跟进到最新版本. 本模板并
+未在其他平台和发行版进行测试, 如 MacOS \& Mac\TeX. 由于历史原因, 目前国内使用 C\TeX\ 
+套装的人还是很多. 然而, C\TeX\ 套装自从 2012 年后就不再更新了, 许多宏包已经很老旧了. 
+因此从 \shuthesis\ v2.0 开始, 模板不再支持在 C\TeX 套装下使用 (C\TeX\ 2.9.2 及之前
+的版本均无法使用). 如果用户需要在 C\TeX\ 下写作, 可使用 \shuthesis\ v1.x. 在 Windows 
+系统和 Linux 系统下作者推荐使用 \TeX Live 进行编译; MacOS 系统可使用 Mac\TeX. 
+
+
+
+
+
+
+
+
+
+
