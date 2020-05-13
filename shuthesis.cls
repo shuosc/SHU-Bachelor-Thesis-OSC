@@ -164,7 +164,7 @@
   \if@openright\cleardoublepage\else\clearpage\fi
   \@mainmatterfalse
   \pagenumbering{Roman}
-  \pagestyle{shu@empty}}
+  \pagestyle{shu@headings}}
 \renewcommand\mainmatter{%
   \if@openright\cleardoublepage\else\clearpage\fi
   \@mainmattertrue
