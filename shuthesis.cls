@@ -105,7 +105,7 @@
 \RequirePackage{tabu}
 \RequirePackage{booktabs}
 \RequirePackage{ulem}
-\RequirePackage[numbers,sort&compress]{natbib}
+\RequirePackage[numbers,sort&compress,super,square]{natbib}
 \patchcmd{\@chapter}{\addtocontents{lof}{\protect\addvspace{10\p@}}}{}{}{} % lof
 \patchcmd{\@chapter}{\addtocontents{lot}{\protect\addvspace{10\p@}}}{}{}{} % lot
 \RequirePackage{hyperref}
