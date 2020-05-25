@@ -3,7 +3,7 @@
 {
 % \cleardoublepage% Move to first page of new chapter
 \let\clearpage\relax% Don't allow page break
-\centering\zihao{1}{\bf{你的文章标题}}
+\centering\zihao{1}{\textbf{你的文章标题}}
 
 \vspace{8mm}
 
@@ -17,7 +17,14 @@
 关键词： \TeX, \LaTeX, Template, Thesis
 
 \newpage
+{
+% \cleardoublepage% Move to first page of new chapter
+\let\clearpage\relax% Don't allow page break
+\centering\zihao{1}{\textbf{English Title}}
+\vspace{8mm}
+
 \chapter*{ABSTRACT}
+}
 \addcontentsline{toc}{chapter}{ABSTRACT}
 
 Abstract in English.
