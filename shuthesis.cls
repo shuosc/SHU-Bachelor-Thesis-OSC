@@ -59,18 +59,18 @@
 \LoadClass[a4paper,UTF8,zihao=-4,scheme=plain]{ctexbook}
 \PassOptionsToPackage{no-math}{fontspec}
 \RequirePackage{ifxetex}
-\ifxetex
-\setCJKfamilyfont{LanTingHei}{FZLanTing.ttf}
-\newcommand{\LanTingHei}{\CJKfamily{LanTingHei}}
-\setCJKfamilyfont{XBSong}{FZXBsong.ttf}
-\newcommand{\XBSong}{\CJKfamily{XBSong}}
-\setCJKfamilyfont{HanYikai}{HanYikaishu.ttf}
-\newcommand{\HanYikai}{\CJKfamily{HanYikai}}
-\else\fi
+% \ifxetex
+% \setCJKfamilyfont{LanTingHei}{FZLanTing.ttf}
+% \newcommand{\LanTingHei}{\CJKfamily{LanTingHei}}
+% \setCJKfamilyfont{XBSong}{FZXBsong.ttf}
+% \newcommand{\XBSong}{\CJKfamily{XBSong}}
+% \setCJKfamilyfont{HanYikai}{HanYikaishu.ttf}
+% \newcommand{\HanYikai}{\CJKfamily{HanYikai}}
+% \else\fi
   \ifshu@master\relax\else
     \ifshu@doctor\relax\else
         \ClassError{shuthesis}%
-                   {Please specify thesis type in option: \MessageBreak
+                  {Please specify thesis type in option: \MessageBreak
                     type=[master|doctor]}{}
     \fi
   \fi
@@ -235,7 +235,7 @@
   \else%
     \textcircled{\xiaoliu\arabic{#1}}%
   \fi}
-\renewcommand{\thefootnote}{\shu@textcircled{footnote}}
+% \renewcommand{\thefootnote}{\shu@textcircled{footnote}}
 \renewcommand{\thempfootnote}{\shu@textcircled{mpfootnote}}
 \def\footnoterule{\vskip-3\p@\hrule\@width0.3\textwidth\@height0.4\p@\vskip2.6\p@}
 \let\shu@footnotesize\footnotesize
@@ -299,22 +299,26 @@
     afterindent=true,
     beforeskip={24bp\@plus 1ex \@minus .2ex},
     afterskip={6bp\@plus .2ex},
-    format={\shu@title@font\heiti\sanhao[1.4]},
+    name={\S},
+    format={\shu@title@font\sanhao\heiti},
   },
   subsection={
     afterindent=true,
     beforeskip={16bp\@plus 1ex \@minus .2ex},
     afterskip={6bp \@plus .2ex},
-    format={\shu@title@font\heiti\sihao[1.5]},
+    name={\S},
+    format={\shu@title@font\large\heiti},
   },
   subsubsection={
     afterindent=true,
     beforeskip={16bp\@plus 1ex \@minus .2ex},
     afterskip={6bp \@plus .2ex},
-    format={\csname shu@title@font\endcsname\heiti\sihao[1.6]},
+    name={\S},
+    format={\shu@title@font\large\heiti},
   },
   paragraph/afterindent=true,
-  subparagraph/afterindent=true}
+  subparagraph/afterindent=true
+}
 \newcounter{shu@bookmark}
 \NewDocumentCommand\shu@chapter{s o m o}{
   \IfBooleanF{#1}{%
@@ -348,25 +352,25 @@
 \patchcmd{\@dottedtocline}{#4}{\csname shu@toc@font\endcsname #4}{}{}
 \patchcmd{\@dottedtocline}{\hb@xt@\@pnumwidth}{\hbox}{}{}
 
-\patchcmd{\@dottedtocline}% <cmd>
-  {#4}% <search>
-  {\ifnum#1=1\S\fi#4}% <replace>
-  {}{}% <search><replace>
+% \patchcmd{\@dottedtocline}% <cmd>
+%   {#4}% <search>
+%   {\ifnum#1=1\S\fi#4}% <replace>
+%   {}{}% <search><replace>
 
-\patchcmd{\@dottedtocline}% <cmd>
-  {#4}% <search>
-  {\ifnum#1=2\S\fi#4}% <replace>
-  {}{}% <search><replace>
+% \patchcmd{\@dottedtocline}% <cmd>
+%   {#4}% <search>
+%   {\ifnum#1=2\S\fi#4}% <replace>
+%   {}{}% <search><replace>
 
-\patchcmd{\@dottedtocline}% <cmd>
-  {#4}% <search>
-  {\ifnum#1=3\S\fi#4}% <replace>
-  {}{}% <search><replace>
+% \patchcmd{\@dottedtocline}% <cmd>
+%   {#4}% <search>
+%   {\ifnum#1=3\S\fi#4}% <replace>
+%   {}{}% <search><replace>
 
-\patchcmd{\@dottedtocline}% <cmd>
-  {#4}% <search>
-  {\ifnum#1=4\S\fi#4}% <replace>
-  {}{}% <search><replace>
+% \patchcmd{\@dottedtocline}% <cmd>
+%   {#4}% <search>
+%   {\ifnum#1=4\S\fi#4}% <replace>
+%   {}{}% <search><replace>
 
 \renewcommand*\l@chapter[2]{%
   \ifnum \c@tocdepth >\m@ne
@@ -431,192 +435,192 @@
 \shu@parse@keywords{ckeywords}
 \shu@parse@keywords{ekeywords}
 \def\shusetup{\kvsetkeys{shu}}
-\def\shu@first@page{\renewcommand{\ULthickness}{1.8pt}%
- {\noindent\ifxetex\XBSong\else\bfseries\songti\fi%
- 中图分类号：{\bfseries\shu@catalognumber}\hfill 单位代号：{\bfseries 10280\hphantom{000}}\\
- 密\hphantom{空白空}级：\expandafter\ifshu@secret\shu@secret@content\else%
- \shu@secretlevel\fi\hfill 学\hphantom{空白}号：{\bfseries\shu@id}}
- \par\vskip1mm
- \noindent\uline{\hspace{105mm}}\par\vskip2mm
-   \ifshu@nocolor
-   \raisebox{1ex}[0pt][0pt]{
-   \includegraphics[height=3cm,width=9.8cm]{shublack.pdf}}\hskip5mm
-   \includegraphics[height=3.3cm,width=2.7cm]{shulogoblack.pdf}
-   \else
-   \raisebox{1ex}[0pt][0pt]{
-   \includegraphics[height=3cm,width=9.8cm]{shu.pdf}}\hskip5mm
-   \includegraphics[height=3.3cm,width=2.7cm]{shulogo.pdf}\fi\par\vskip5mm
-   \hskip3mm{\maxsize\ifxetex\LanTingHei\else\bfseries\heiti\fi\shu@cdegree 学位论文}
- \par\vskip-1mm
- \noindent\uline{\hskip143mm}\par\vskip1mm
- {\zihao{-1}\bfseries
-  \centerline{SHANGHAI~~UNIVERSITY}
-  \centerline{\MakeUppercase{\shu@edegree}'S~~DISSERTATION}}
- \begin{center}
-   \tabulinesep=_5mm^5mm
-   \arrayrulewidth=1pt
-     \begin{tabu} to 0.9\textwidth{|X[1,c,m]|X[11,c,m]|}
-       \hline
-       \zihao{-2}\ifxetex\HanYikai\else\bfseries\kaishu\fi\makecell{题\\ 目} &
-       \erhao[1.4]\bfseries\ifxetex\LanTingHei\else\heiti\fi\tabulinesep=_1.5mm^1.5mm
-          \begin{tabu}{X[c,m]}
-            \shu@ctitle
-          \end{tabu}\\\hline
-     \end{tabu}
- \end{center}
-   \vfill\renewcommand{\ULthickness}{1pt}
- \begin{center}
-  {\heiti\xiaoer[1.9]
-  \begin{tabular}{cl}
-    作\hphantom{空白}者 & \uline{\kaishu\makebox[55mm]{\shu@cauthor}}\\
-    学科专业            & \uline{\kaishu\makebox[55mm]{\shu@cmajor}}\\
-    导\hphantom{空白}师 & \uline{\kaishu\makebox[55mm]{\shu@csupervisor}}\\
-    完成日期            & \uline{\kaishu\makebox[55mm]{\shu@coverdate}}\\
-  \end{tabular}}
- \end{center}
- \if@openright\cleardoublepage\else\clearpage\fi}
-\newcommand{\makefirstpage}{
- \newgeometry{left=3.5cm,right=3.5cm,top=3cm,bottom=3.5cm}
- \shu@first@page
- \restoregeometry}
-\newcommand{\shu@committee}{
- \noindent\centerline{\zihao{2} 上海大学} \par
- \vskip1.5cm
- \erhao[1.5] 本论文经答辩委员会全体委员审查，
- 确认符合上海大学博士学位论文质量要求。\par
- \vskip3.9cm
- \zihao{-2} 答辩委员会签名:\par
- \vskip1cm
- 主席:\par
- \vskip1cm
- 委员:\par
- \vskip6cm
- 导\hphantom{空白}师:\par
- \vskip1cm
- 答辩日期:
- \if@openright\cleardoublepage\else\clearpage\fi
- }
-\newcommand{\shu@authordeclare}{%
- \begin{center}
- \zihao{2}\ifxetex\XBSong\else\bfseries\songti\fi 原创性声明
- \end{center}
- \par\vskip1cm\sihao[1.7]
- 本人声明：所呈交的论文是本人在导师指导下进行的研究工作。
- 除了文中特别加以标注和致谢的地方外，论文中不包含其他人已发表或撰写过
- 的研究成果。参与同一工作的其他同志对本研究所做的任何贡献均已在论文中
- 作了明确的说明并表示了谢意。
- \vskip2.3cm
- \hfill 签名: \underline{\hskip3cm}
- 日期: \underline{\hskip3cm}\\
- \vskip2.5cm
- \begin{center}
- \zihao{2}\ifxetex\XBSong\else\bfseries\songti\fi 本论文使用授权说明
- \end{center}
- \par\vskip1.1cm
- 本人完全了解上海大学有关保留、使用学位论文的规定。即：学校有权保留论文
- 及送交论文复印件，允许论文被查阅和借阅；学校可以公布论文的全部或部分内容。\par
- ({\ifxetex\XBSong\else\bfseries\songti\fi 保密的论文在解密后应遵守此规定})
- \vskip1.5cm
- \noindent\hfill 签名: \underline{\hskip2.7cm}
- 导师签名: \underline{\hskip2.7cm}
- 日期: \underline{\hskip2.7cm}\hfill
-\if@openright\cleardoublepage\else\clearpage\fi}
-\newcommand{\shu@cncover}{%
- \vspace*{1.3cm}
- \centerline{\zihao{2} 上海大学\shu@cdisciplines\shu@cdegree 学位论文}
- \vskip3.5cm
- \begin{center}\yihao[1.5]{\bfseries{\shu@ctitle}}\end{center}
- \vskip3.5cm
- \begin{center}\xiaoer[1.8]
- \begin{tabular}{cl}
- 作\hphantom{空白}者: & \kaishu\shu@cauthor\\
- 导\hphantom{空白}师: & \kaishu\shu@csupervisor\\
- 学科专业:            & \kaishu\shu@cmajor\\
- \end{tabular}
- \end{center}
- \vskip3.5cm
- \begin{center}
- \sanhao[1.6]\shu@cdepartment\\
- 上海大学\\
- \shu@cdate
- \end{center}
-\if@openright\cleardoublepage\else\clearpage\fi}
-\newcommand{\shu@engcover}{%
- \vspace*{.5cm}
- \begin{center}
- \sanhao[1.6] A Dissertation Submitted to Shanghai University
- for the \\ Degree of \shu@edegree~in \shu@edisciplines\par
- \vskip3cm
- \begin{center}\zihao{1}{\bfseries{\shu@etitle}}\end{center}
- \vskip4cm
- \begin{tabular}{rl}
- Candidate:  & \shu@eauthor\\
- Supervisor: & \shu@esupervisor\\
- Major:      & \shu@emajor\\
- \end{tabular}
- \vskip4cm
- \bfseries\shu@edepartment\\
- Shanghai University\\
- \shu@edate
- \end{center}
- \if@openright\cleardoublepage\else\clearpage\fi}
-\def\makecover{\shu@setup@pdfinfo\shu@makecover}
-\def\shu@setup@pdfinfo{
-  \hypersetup{
-    pdftitle={\shu@ctitle},
-    pdfauthor={\shu@cauthor},
-    pdfsubject={\shu@cdegree},
-    pdfkeywords={\shu@ckeywords},
-    pdfcreator={\shuthesis-v\version}}}
-\newcommand{\shu@makecover}{
-  \phantomsection
-  \pdfbookmark[-1]{\shu@ctitle}{ctitle}
-  \normalsize
- \shu@committee
- \shu@authordeclare
- \shu@cncover
- \shu@engcover
- \normalsize
- \shu@makeabstract
- \let\@tabular\shu@tabular
- \if@openright\cleardoublepage\else\clearpage\fi}
-\newbox\shu@kw
-\newcommand\shu@put@keywords[2]{%
-  \begingroup
-    \setbox\shu@kw=\hbox{#1}
-    \noindent\hangindent\wd\shu@kw\hangafter1%
-    \box\shu@kw#2\par
-  \endgroup}
-\newcommand{\shu@makeabstract}{%
-  \shu@chapter*[]{\cabstractname}
-    \pagestyle{shu@headings}
-    \pagenumbering{Roman}
-  \shu@cabstract
-  \vskip12bp
-  \shu@put@keywords{\heiti\shu@ckeywords@title\enskip}{\shu@ckeywords}
-  \shu@chapter*[]{\eabstractname}
-  \shu@eabstract
-  \vskip12bp
-  \shu@put@keywords{%
-    \textbf{Keywords}:\enskip}{\shu@ekeywords}}
-\newenvironment{denotation}[1][2.5cm]{%
-  \shu@chapter*[]{\shu@denotation@name} % no tocline
-  \vskip-30bp\xiaosi[1.6]\begin{shu@denotation}[labelwidth=#1]
- }{%
-  \end{shu@denotation}
- }
- \newlist{shu@denotation}{description}{1}
- \setlist[shu@denotation]{%
-  nosep,
-  font=\normalfont,
-  align=left,
-  leftmargin=5cm,
-  rightmargin=2.5cm,
-  labelindent=0pt,
-  labelwidth=2.5cm,
-  labelsep*=0.5cm,
-  itemindent=0pt,
- }
+% \def\shu@first@page{\renewcommand{\ULthickness}{1.8pt}%
+%  {\noindent\ifxetex\XBSong\else\bfseries\songti\fi%
+%  中图分类号：{\bfseries\shu@catalognumber}\hfill 单位代号：{\bfseries 10280\hphantom{000}}\\
+%  密\hphantom{空白空}级：\expandafter\ifshu@secret\shu@secret@content\else%
+%  \shu@secretlevel\fi\hfill 学\hphantom{空白}号：{\bfseries\shu@id}}
+%  \par\vskip1mm
+%  \noindent\uline{\hspace{105mm}}\par\vskip2mm
+%   \ifshu@nocolor
+%   \raisebox{1ex}[0pt][0pt]{
+%   \includegraphics[height=3cm,width=9.8cm]{shublack.pdf}}\hskip5mm
+%   \includegraphics[height=3.3cm,width=2.7cm]{shulogoblack.pdf}
+%   \else
+%   \raisebox{1ex}[0pt][0pt]{
+%   \includegraphics[height=3cm,width=9.8cm]{shu.pdf}}\hskip5mm
+%   \includegraphics[height=3.3cm,width=2.7cm]{shulogo.pdf}\fi\par\vskip5mm
+%   \hskip3mm{\maxsize\ifxetex\LanTingHei\else\bfseries\heiti\fi\shu@cdegree 学位论文}
+%  \par\vskip-1mm
+%  \noindent\uline{\hskip143mm}\par\vskip1mm
+%  {\zihao{-1}\bfseries
+%   \centerline{SHANGHAI~~UNIVERSITY}
+%   \centerline{\MakeUppercase{\shu@edegree}'S~~DISSERTATION}}
+%  \begin{center}
+%   \tabulinesep=_5mm^5mm
+%   \arrayrulewidth=1pt
+%      \begin{tabu} to 0.9\textwidth{|X[1,c,m]|X[11,c,m]|}
+%       \hline
+%       \zihao{-2}\ifxetex\HanYikai\else\bfseries\kaishu\fi\makecell{题\\ 目} &
+%       \erhao[1.4]\bfseries\ifxetex\LanTingHei\else\heiti\fi\tabulinesep=_1.5mm^1.5mm
+%           \begin{tabu}{X[c,m]}
+%             \shu@ctitle
+%           \end{tabu}\\\hline
+%      \end{tabu}
+%  \end{center}
+%   \vfill\renewcommand{\ULthickness}{1pt}
+%  \begin{center}
+%   {\heiti\xiaoer[1.9]
+%   \begin{tabular}{cl}
+%     作\hphantom{空白}者 & \uline{\kaishu\makebox[55mm]{\shu@cauthor}}\\
+%     学科专业            & \uline{\kaishu\makebox[55mm]{\shu@cmajor}}\\
+%     导\hphantom{空白}师 & \uline{\kaishu\makebox[55mm]{\shu@csupervisor}}\\
+%     完成日期            & \uline{\kaishu\makebox[55mm]{\shu@coverdate}}\\
+%   \end{tabular}}
+%  \end{center}
+%  \if@openright\cleardoublepage\else\clearpage\fi}
+% \newcommand{\makefirstpage}{
+%  \newgeometry{left=3.5cm,right=3.5cm,top=3cm,bottom=3.5cm}
+%  \shu@first@page
+%  \restoregeometry}
+% \newcommand{\shu@committee}{
+%  \noindent\centerline{\zihao{2} 上海大学} \par
+%  \vskip1.5cm
+%  \erhao[1.5] 本论文经答辩委员会全体委员审查，
+%  确认符合上海大学博士学位论文质量要求。\par
+%  \vskip3.9cm
+%  \zihao{-2} 答辩委员会签名:\par
+%  \vskip1cm
+%  主席:\par
+%  \vskip1cm
+%  委员:\par
+%  \vskip6cm
+%  导\hphantom{空白}师:\par
+%  \vskip1cm
+%  答辩日期:
+%  \if@openright\cleardoublepage\else\clearpage\fi
+%  }
+% \newcommand{\shu@authordeclare}{%
+%  \begin{center}
+%  \zihao{2}\ifxetex\XBSong\else\bfseries\songti\fi 原创性声明
+%  \end{center}
+%  \par\vskip1cm\sihao[1.7]
+%  本人声明：所呈交的论文是本人在导师指导下进行的研究工作。
+%  除了文中特别加以标注和致谢的地方外，论文中不包含其他人已发表或撰写过
+%  的研究成果。参与同一工作的其他同志对本研究所做的任何贡献均已在论文中
+%  作了明确的说明并表示了谢意。
+%  \vskip2.3cm
+%  \hfill 签名: \underline{\hskip3cm}
+%  日期: \underline{\hskip3cm}\\
+%  \vskip2.5cm
+%  \begin{center}
+%  \zihao{2}\ifxetex\XBSong\else\bfseries\songti\fi 本论文使用授权说明
+%  \end{center}
+%  \par\vskip1.1cm
+%  本人完全了解上海大学有关保留、使用学位论文的规定。即：学校有权保留论文
+%  及送交论文复印件，允许论文被查阅和借阅；学校可以公布论文的全部或部分内容。\par
+%  ({\ifxetex\XBSong\else\bfseries\songti\fi 保密的论文在解密后应遵守此规定})
+%  \vskip1.5cm
+%  \noindent\hfill 签名: \underline{\hskip2.7cm}
+%  导师签名: \underline{\hskip2.7cm}
+%  日期: \underline{\hskip2.7cm}\hfill
+% \if@openright\cleardoublepage\else\clearpage\fi}
+% \newcommand{\shu@cncover}{%
+%  \vspace*{1.3cm}
+%  \centerline{\zihao{2} 上海大学\shu@cdisciplines\shu@cdegree 学位论文}
+%  \vskip3.5cm
+%  \begin{center}\yihao[1.5]{\bfseries{\shu@ctitle}}\end{center}
+%  \vskip3.5cm
+%  \begin{center}\xiaoer[1.8]
+%  \begin{tabular}{cl}
+%  作\hphantom{空白}者: & \kaishu\shu@cauthor\\
+%  导\hphantom{空白}师: & \kaishu\shu@csupervisor\\
+%  学科专业:            & \kaishu\shu@cmajor\\
+%  \end{tabular}
+%  \end{center}
+%  \vskip3.5cm
+%  \begin{center}
+%  \sanhao[1.6]\shu@cdepartment\\
+%  上海大学\\
+%  \shu@cdate
+%  \end{center}
+% \if@openright\cleardoublepage\else\clearpage\fi}
+% \newcommand{\shu@engcover}{%
+%  \vspace*{.5cm}
+%  \begin{center}
+%  \sanhao[1.6] A Dissertation Submitted to Shanghai University
+%  for the \\ Degree of \shu@edegree~in \shu@edisciplines\par
+%  \vskip3cm
+%  \begin{center}\zihao{1}{\bfseries{\shu@etitle}}\end{center}
+%  \vskip4cm
+%  \begin{tabular}{rl}
+%  Candidate:  & \shu@eauthor\\
+%  Supervisor: & \shu@esupervisor\\
+%  Major:      & \shu@emajor\\
+%  \end{tabular}
+%  \vskip4cm
+%  \bfseries\shu@edepartment\\
+%  Shanghai University\\
+%  \shu@edate
+%  \end{center}
+%  \if@openright\cleardoublepage\else\clearpage\fi}
+% \def\makecover{\shu@setup@pdfinfo\shu@makecover}
+% \def\shu@setup@pdfinfo{
+%   \hypersetup{
+%     pdftitle={\shu@ctitle},
+%     pdfauthor={\shu@cauthor},
+%     pdfsubject={\shu@cdegree},
+%     pdfkeywords={\shu@ckeywords},
+%     pdfcreator={\shuthesis-v\version}}}
+% \newcommand{\shu@makecover}{
+%   \phantomsection
+%   \pdfbookmark[-1]{\shu@ctitle}{ctitle}
+%   \normalsize
+%  \shu@committee
+%  \shu@authordeclare
+%  \shu@cncover
+%  \shu@engcover
+%  \normalsize
+%  \shu@makeabstract
+%  \let\@tabular\shu@tabular
+%  \if@openright\cleardoublepage\else\clearpage\fi}
+% \newbox\shu@kw
+% \newcommand\shu@put@keywords[2]{%
+%   \begingroup
+%     \setbox\shu@kw=\hbox{#1}
+%     \noindent\hangindent\wd\shu@kw\hangafter1%
+%     \box\shu@kw#2\par
+%   \endgroup}
+% \newcommand{\shu@makeabstract}{%
+%   \shu@chapter*[]{\cabstractname}
+%     \pagestyle{shu@headings}
+%     \pagenumbering{Roman}
+%   \shu@cabstract
+%   \vskip12bp
+%   \shu@put@keywords{\heiti\shu@ckeywords@title\enskip}{\shu@ckeywords}
+%   \shu@chapter*[]{\eabstractname}
+%   \shu@eabstract
+%   \vskip12bp
+%   \shu@put@keywords{%
+%     \textbf{Keywords}:\enskip}{\shu@ekeywords}}
+% \newenvironment{denotation}[1][2.5cm]{%
+%   \shu@chapter*[]{\shu@denotation@name} % no tocline
+%   \vskip-30bp\xiaosi[1.6]\begin{shu@denotation}[labelwidth=#1]
+%  }{%
+%   \end{shu@denotation}
+%  }
+%  \newlist{shu@denotation}{description}{1}
+%  \setlist[shu@denotation]{%
+%   nosep,
+%   font=\normalfont,
+%   align=left,
+%   leftmargin=5cm,
+%   rightmargin=2.5cm,
+%   labelindent=0pt,
+%   labelwidth=2.5cm,
+%   labelsep*=0.5cm,
+%   itemindent=0pt,
+%  }
 \newenvironment{acknowledgement}{\shu@chapter*[致谢]{致\quad 谢}}{}
 \def\shu@starttoc#1{% #1: float type, prepend type name in \listof*** entry.
   \let\oldnumberline\numberline
