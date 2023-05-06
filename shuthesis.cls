@@ -8,7 +8,7 @@
 %% 
 %% This is a generated file.
 %% 
-%% Copyright (C) 2017-2017 by Lele Liu <ahhylau@gmail.com>
+%% Copyright (C) 2017-2023 by Lele Liu <ahhylau@gmail.com>
 %% 
 %% This file may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either version 1.3a
@@ -25,12 +25,12 @@
 %% 
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
 \ProvidesClass{shuthesis}
-[2017/05/05 v2.0 Shanghai University Thesis Template]
+[2023/05/05 v2.1 Shanghai University Thesis Template]
 \hyphenation{Shu-Thesis}
 \def\shuthesis{\textsc{ShuThesis}}
 \def\shubachelorthesis{\textsc{ShuBachelorThesis}}
 \def\shubachelorthesisOSC{\textsc{ShuBachelorThesis-OSC}}
-\def\version{2.0}
+\def\version{2.1}
 \RequirePackage{kvoptions}
 \SetupKeyvalOptions{
   family=shu,
@@ -106,6 +106,7 @@
 \RequirePackage{booktabs}
 \RequirePackage{ulem}
 \RequirePackage[numbers,sort&compress,super,square]{natbib}
+\usepackage{setspace}
 \patchcmd{\@chapter}{\addtocontents{lof}{\protect\addvspace{10\p@}}}{}{}{} % lof
 \patchcmd{\@chapter}{\addtocontents{lot}{\protect\addvspace{10\p@}}}{}{}{} % lot
 \RequirePackage{hyperref}
@@ -214,12 +215,12 @@
   \fancyhead{}
   % \fancyhead[LE]{\wuhao\kaishu 上海大学毕业设计(论文)}
   % \fancyhead[LO]{\wuhao\kaishu 上海大学毕业设计(论文)}
-  \fancyhead[LE]{\xiaowu 上海大学毕业设计(论文)}
-  \fancyhead[LO]{\xiaowu 上海大学毕业设计(论文)}
+  \fancyhead[LE]{\vspace{2pt}\wuhao 上海大学本科毕业论文（设计）}
+  \fancyhead[LO]{\vspace{2pt}\wuhao 上海大学本科毕业论文（设计）}
   % \fancyhead[CE]{\wuhao\kaishu 上海大学毕业设计(论文)}
   \fancyfoot{}
   \fancyfoot[C]{\wuhao\thepage}
-  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\headrulewidth}{0.72pt}
   \renewcommand{\footrulewidth}{0pt}}
 \ctexset{%
   space=auto,
@@ -299,21 +300,21 @@
     afterindent=true,
     beforeskip={24bp\@plus 1ex \@minus .2ex},
     afterskip={6bp\@plus .2ex},
-    name={\S},
+    name={},
     format={\shu@title@font\sanhao\heiti},
   },
   subsection={
     afterindent=true,
     beforeskip={16bp\@plus 1ex \@minus .2ex},
     afterskip={6bp \@plus .2ex},
-    name={\S},
+    name={},
     format={\shu@title@font\large\heiti},
   },
   subsubsection={
     afterindent=true,
     beforeskip={16bp\@plus 1ex \@minus .2ex},
     afterskip={6bp \@plus .2ex},
-    name={\S},
+    name={},
     format={\shu@title@font\large\heiti},
   },
   paragraph/afterindent=true,
