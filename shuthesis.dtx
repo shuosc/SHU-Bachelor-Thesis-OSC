@@ -19,7 +19,7 @@
 %
 % \iffalse
 %<*driver>
-\ProvidesFile{shuthesis.dtx}[2017/05/05 2.0 Shanghai University Thesis Template]
+\ProvidesFile{shuthesis.dtx}[2023/05/05 2.1 Shanghai University Bachelor Thesis Template]
 \documentclass{ltxdoc}
 \usepackage{dtx-style}
 
@@ -80,7 +80,7 @@
 % \GlossaryPrologue{\section{\glossaryname}}
 %
 % \title{\bfseries\color{medpurple}\shuthesis: 上海大学学位论文模板}
-% \author{{\kaishu 刘乐乐}\\[5pt]\texttt{ahhylau@gmail.com}}
+% \author{{ 刘乐乐}\\[5pt]\texttt{ahhylau@gmail.com}}
 % \date{v\fileversion\ (\filedate)}
 % \maketitle\thispagestyle{empty}
 %
@@ -692,7 +692,7 @@
 %<cls>\NeedsTeXFormat{LaTeX2e}[1999/12/01]
 %<cls>\ProvidesClass{shuthesis}
 %<cfg>\ProvidesFile{shuthesis.cfg}
-%<cls|cfg>[2017/05/05 v2.0 Shanghai University Thesis Template]
+%<cls|cfg>[2023/05/05 v2.1 Shanghai University Bachelor Thesis Template]
 %    \end{macrocode}
 %
 % \subsection{定义选项}
@@ -701,7 +701,8 @@
 %<*cls>
 \hyphenation{Shu-Thesis}
 \def\shuthesis{\textsc{ShuThesis}}
-\def\version{2.0}
+\def\shubachelorthesisOSC{\textsc{ShuBachelorThesisOSC}}
+\def\version{2.1}
 \RequirePackage{kvoptions}
 \SetupKeyvalOptions{
   family=shu,
@@ -793,14 +794,14 @@
 % \changes{v2.0}{2017/05/05}{使用方正小标宋和方正兰亭黑字体.}
 %    \begin{macrocode}
 \RequirePackage{ifxetex}
-\ifxetex
-\setCJKfamilyfont{LanTingHei}{FZLanTing.ttf}
-\newcommand{\LanTingHei}{\CJKfamily{LanTingHei}}
-\setCJKfamilyfont{XBSong}{FZXBsong.ttf}
-\newcommand{\XBSong}{\CJKfamily{XBSong}}
-\setCJKfamilyfont{HanYikai}{HanYikaishu.ttf}
-\newcommand{\HanYikai}{\CJKfamily{HanYikai}}
-\else\fi
+%\ifxetex
+%\setCJKfamilyfont{LanTingHei}{FZLanTing.ttf}
+%\newcommand{\LanTingHei}{\CJKfamily{LanTingHei}}
+%\setCJKfamilyfont{XBSong}{FZXBsong.ttf}
+%\newcommand{\XBSong}{\CJKfamily{XBSong}}
+%\setCJKfamilyfont{HanYikai}{HanYikaishu.ttf}
+%\newcommand{\HanYikai}{\CJKfamily{HanYikai}}
+%\else\fi
 %    \end{macrocode}
 %
 % 用户至少要提供一个选项, 指定论文类型.
@@ -1185,11 +1186,11 @@
   \renewcommand{\footrulewidth}{0pt}}
 \fancypagestyle{shu@headings}{%
   \fancyhead{}
-  \fancyhead[CO]{\wuhao\kaishu\leftmark}
-  \fancyhead[CE]{\wuhao\kaishu 上海大学\shu@cdegree 学位论文}
+  \fancyhead[LE]{\vspace{2pt}\wuhao 上海大学本科毕业论文（设计）}
+  \fancyhead[LO]{\vspace{2pt}\wuhao 上海大学本科毕业论文（设计）}
   \fancyfoot{}
   \fancyfoot[C]{\wuhao\thepage}
-  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\headrulewidth}{0.72pt}
   \renewcommand{\footrulewidth}{0pt}}
 %</cls>
 %    \end{macrocode}
@@ -1766,7 +1767,7 @@
    \arrayrulewidth=1pt
      \begin{tabu} to 0.9\textwidth{|X[1,c,m]|X[11,c,m]|}
        \hline
-       \zihao{-2}\ifxetex\HanYikai\else\bfseries\kaishu\fi\makecell{题\\ 目} &
+       \zihao{-2}\ifxetex\HanYikai\else\bfseries\fi\makecell{题\\ 目} &
        \erhao[1.4]\bfseries\ifxetex\LanTingHei\else\heiti\fi\tabulinesep=_1.5mm^1.5mm 
           \begin{tabu}{X[c,m]} 
             \shu@ctitle
@@ -1777,10 +1778,10 @@
  \begin{center}
   {\heiti\xiaoer[1.9]
   \begin{tabular}{cl}
-    作\hphantom{空白}者 & \uline{\kaishu\makebox[55mm]{\shu@cauthor}}\\
-    学科专业            & \uline{\kaishu\makebox[55mm]{\shu@cmajor}}\\
-    导\hphantom{空白}师 & \uline{\kaishu\makebox[55mm]{\shu@csupervisor}}\\
-    完成日期            & \uline{\kaishu\makebox[55mm]{\shu@coverdate}}\\
+    作\hphantom{空白}者 & \uline{\makebox[55mm]{\shu@cauthor}}\\
+    学科专业            & \uline{\makebox[55mm]{\shu@cmajor}}\\
+    导\hphantom{空白}师 & \uline{\makebox[55mm]{\shu@csupervisor}}\\
+    完成日期            & \uline{\makebox[55mm]{\shu@coverdate}}\\
   \end{tabular}}
  \end{center}
  \if@openright\cleardoublepage\else\clearpage\fi}
@@ -1866,9 +1867,9 @@
  \vskip3.5cm
  \begin{center}\xiaoer[1.8]
  \begin{tabular}{cl}
- 作\hphantom{空白}者: & \kaishu\shu@cauthor\\
- 导\hphantom{空白}师: & \kaishu\shu@csupervisor\\
- 学科专业:            & \kaishu\shu@cmajor\\
+ 作\hphantom{空白}者: & \shu@cauthor\\
+ 导\hphantom{空白}师: & \shu@csupervisor\\
+ 学科专业:            & \shu@cmajor\\
  \end{tabular}
  \end{center}
  \vskip3.5cm
