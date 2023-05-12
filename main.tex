@@ -10,6 +10,8 @@
 \usepackage{shuthesis}
 \usepackage{times}
 \usepackage{gbt7714}
+\bibliographystyle{gbt7714-numerical}
+\citestyle{super}                   % 默认引用为角标格式，正文格式为\citestyle{numbers}
 
 \graphicspath{{figures/}}
 
@@ -34,12 +36,14 @@
 
 \include{data/acknowledgement}
 
-\bibliographystyle{gbt7714-numerical}
 \bibliography{reference/refs}
 
 \backmatter
 \begin{appendix}
 \input{data/appendix}
 \end{appendix}
+
+
+\includepdf[pages={1}]{back-cover.pdf} 
 
 \end{document}
