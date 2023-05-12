@@ -28,6 +28,7 @@
 [2023/05/05 v2.1 Shanghai University Bachelor Thesis Template]
 \hyphenation{Shu-Thesis}
 \def\shuthesis{\textsc{ShuThesis}}
+\def\shubachelorthesis{\textsc{ShuBachelorThesis}}
 \def\shubachelorthesisOSC{\textsc{ShuBachelorThesisOSC}}
 \def\version{2.1}
 \RequirePackage{kvoptions}
@@ -73,7 +74,6 @@
 \RequirePackage{mathrsfs}
 \RequirePackage{bm}
 \RequirePackage{mathtools}
-\RequirePackage[defaultsups]{newtxtext}
 \RequirePackage{courier}
 \RequirePackage{graphicx}
 \RequirePackage[labelformat=simple]{subcaption}
