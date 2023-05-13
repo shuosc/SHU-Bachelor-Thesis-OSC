@@ -9,6 +9,7 @@
 \usepackage{pdfpages}
 \usepackage{shuthesis}
 \usepackage{times}
+\usepackage{zhnumber}
 \usepackage{gbt7714}
 \bibliographystyle{gbt7714-numerical}
 \citestyle{super}                   % 默认引用为角标格式，正文格式为\citestyle{numbers}
@@ -26,6 +27,14 @@
     \hypersetup{linkcolor=black}
     \tableofcontents
 }
+
+\setcounter{chapter}{0}
+\newcommand{\mychapter}[1]{
+  \stepcounter{chapter}
+  \chapter*{\thechapter #1}
+  \addcontentsline{toc}{chapter}{\zhnumber{\thechapter}、~~#1}
+}
+
 \include{data/abstract}
 
 \mainmatter
@@ -47,3 +56,4 @@
 \includepdf[pages={1}]{back-cover.pdf} 
 
 \end{document}
+
