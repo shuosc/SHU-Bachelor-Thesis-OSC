@@ -278,7 +278,8 @@
     afterskip={24bp},
     format={\centering\shu@title@font\heiti\xiaoer[1]},
     nameformat=\relax,
-    number=\chinese{chapter},
+    name={,},
+    number=\arabic{chapter},
     numberformat=\relax,
     titleformat=\shu@chapter@titleformat,
   },
@@ -286,19 +287,19 @@
     afterindent=true,
     beforeskip={24bp\@plus 1ex \@minus .2ex},
     afterskip={6bp\@plus .2ex},
-    format={\shu@title@font\heiti\sanhao[1.4]},
+    format={\shu@title@font\heiti\sihao[1.4]},
   },
   subsection={
     afterindent=true,
     beforeskip={16bp\@plus 1ex \@minus .2ex},
     afterskip={6bp \@plus .2ex},
-    format={\shu@title@font\heiti\sihao[1.5]},
+    format={\shu@title@font\heiti\xiaosi[1.5]},
   },
   subsubsection={
     afterindent=true,
     beforeskip={16bp\@plus 1ex \@minus .2ex},
     afterskip={6bp \@plus .2ex},
-    format={\csname shu@title@font\endcsname\heiti\sihao[1.6]},
+    format={\csname shu@title@font\endcsname\heiti\xiaosi[1.6]},
   },
   paragraph/afterindent=true,
   subparagraph/afterindent=true}
@@ -338,7 +339,7 @@
   \ifnum \c@tocdepth >\m@ne
     \addpenalty{-\@highpenalty}%
     \vskip 4bp \@plus\p@
-    \setlength\@tempdima{3.7em}%
+    \setlength\@tempdima{1em}%
     \begingroup
       \parindent \z@ \rightskip \@pnumwidth
       \parfillskip -\@pnumwidth
