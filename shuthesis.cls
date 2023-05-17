@@ -165,7 +165,7 @@
   \if@openright\cleardoublepage\else\clearpage\fi
   \@mainmattertrue}
 \renewcommand\normalsize{%
-  \@setfontsize\normalsize{12bp}{20bp}%
+  \@setfontsize\normalsize{12bp}{23bp}%
   \abovedisplayskip=13bp \@plus 2bp \@minus 2bp
   \abovedisplayshortskip=13bp \@plus 2bp \@minus 2bp
   \belowdisplayskip=\abovedisplayskip
