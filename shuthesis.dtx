@@ -1064,11 +1064,11 @@
 % \subsubsection{字体}
 % \label{sec:font}
 % \begin{macro}{\normalsize}
-% 正文小四号 (12bp) 字, 行距为固定值 20 bp. 设置文字与公式的垂直距离.
+% 正文小四号 (12bp) 字, 行距为固定值 23 bp. 设置文字与公式的垂直距离.
 %    \begin{macrocode}
 %<*cls>
 \renewcommand\normalsize{%
-  \@setfontsize\normalsize{12bp}{20bp}%
+  \@setfontsize\normalsize{12bp}{23bp}%
   \abovedisplayskip=13bp \@plus 2bp \@minus 2bp
   \abovedisplayshortskip=13bp \@plus 2bp \@minus 2bp
   \belowdisplayskip=\abovedisplayskip
@@ -1354,7 +1354,6 @@
 %    \begin{macrocode}
 %<*cfg>
 \ctexset{%
-  chapter/name={第,章},
   appendixname=附录,
   contentsname={目\hspace{\ccwd}录},
   listfigurename={插图索引},
@@ -1448,7 +1447,8 @@
     afterskip={24bp},
     format={\centering\shu@title@font\heiti\xiaoer[1]},
     nameformat=\relax,
-    number=\chinese{chapter},
+    name={,},
+    number=\arabic{chapter},
     numberformat=\relax,
     titleformat=\shu@chapter@titleformat,
   },
@@ -1456,19 +1456,19 @@
     afterindent=true,
     beforeskip={24bp\@plus 1ex \@minus .2ex},
     afterskip={6bp\@plus .2ex},
-    format={\shu@title@font\heiti\sanhao[1.4]},
+    format={\shu@title@font\heiti\sihao[1.4]},
   },
   subsection={
     afterindent=true,
     beforeskip={16bp\@plus 1ex \@minus .2ex},
     afterskip={6bp \@plus .2ex},
-    format={\shu@title@font\heiti\sihao[1.5]},
+    format={\shu@title@font\heiti\xiaosi[1.5]},
   },
   subsubsection={
     afterindent=true,
     beforeskip={16bp\@plus 1ex \@minus .2ex},
     afterskip={6bp \@plus .2ex},
-    format={\csname shu@title@font\endcsname\heiti\sihao[1.6]},
+    format={\csname shu@title@font\endcsname\heiti\xiaosi[1.6]},
   },
   paragraph/afterindent=true,
   subparagraph/afterindent=true}
@@ -1531,7 +1531,7 @@
   \ifnum \c@tocdepth >\m@ne
     \addpenalty{-\@highpenalty}%
     \vskip 4bp \@plus\p@
-    \setlength\@tempdima{3.7em}%
+    \setlength\@tempdima{1em}%
     \begingroup
       \parindent \z@ \rightskip \@pnumwidth
       \parfillskip -\@pnumwidth
