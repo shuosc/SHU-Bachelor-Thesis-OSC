@@ -843,6 +843,11 @@
 \RequirePackage{bm}
 %    \end{macrocode}
 %
+% 处理正文中的加粗.
+%    \begin{macrocode}
+\RequirePackage[T1]{fontenc}
+%    \end{macrocode}
+%
 % \pkg{mathtools} 宏包是 \AmSTeX\ 宏包的补充, 它提供了许多有用的命令, 比如 \texttt{dcases} 
 % 等环境, 详见 \pkg{mathtools} 的宏包说明文档. 另外, \pkg{ntheorem} 宏包会影响 \pkg{mathtools}, 
 % 因此需要在 \pkg{ntheorem} 之前调用 \pkg{mathtools} 宏包.
@@ -1319,7 +1324,7 @@
 %
 % 定制浮动图形和表格标题样式
 % \begin{itemize}
-%   \item 图表标题字体为 11pt, 这里写作大五号
+%   \item 图表标题字体为小四
 %   \item 去掉图表号后面的冒号. 图序与图名文字之间空一个汉字符宽度。
 %   \item 图：caption 在下, 段前空 6 磅, 段后空 12 磅
 %   \item 表：caption 在上, 段前空 12 磅, 段后空 6 磅
@@ -1327,10 +1332,10 @@
 %
 %    \begin{macrocode}
 \let\old@tabular\@tabular
-\def\shu@tabular{\dawu[1.5]\old@tabular}
-\DeclareCaptionLabelFormat{shu}{{\dawu[1.5]\heiti #1~\rmfamily #2}}
+\def\shu@tabular{\xiaosi[1.5]\old@tabular}
+\DeclareCaptionLabelFormat{shu}{{\xiaosi[1.5]\heiti #1~\rmfamily\bfseries#2 }}
 \DeclareCaptionLabelSeparator{shu}{\hspace{1em}}
-\DeclareCaptionFont{shu}{\dawu[1.5]}
+\DeclareCaptionFont{shu}{\xiaosi[1.5]\heiti}
 \captionsetup{labelformat=shu,labelsep=shu,font=shu}
 \captionsetup[table]{position=top,belowskip={12bp-\intextsep},aboveskip=6bp}
 \captionsetup[figure]{position=bottom,belowskip={12bp-\intextsep},aboveskip=6bp}
@@ -1340,11 +1345,11 @@
 %\renewcommand{\p@subfigure}{:}
 %    \end{macrocode}
 %
-% 我们采用 \pkg{longtable} 来处理跨页的表格. 同样我们需要设置其默认字体为五号.
+% 我们采用 \pkg{longtable} 来处理跨页的表格. 同样我们需要设置其默认字体为小四.
 %
 %    \begin{macrocode}
 \let\shu@LT@array\LT@array
-\def\LT@array{\dawu[1.5]\shu@LT@array} % set default font size
+\def\LT@array{\xiaosi[1.5]\shu@LT@array} % set default font size
 %</cls>
 %    \end{macrocode}
 %
