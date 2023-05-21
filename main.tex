@@ -16,10 +16,10 @@
 \graphicspath{{figures/}}
 
 %\setCJKmainfont{FandolSong-Regular}[BoldFont=FandolHei-Regular,ItalicFont=FandolKai-Regular] % Linux
-%\setCJKmainfont{Songti SC Light}[BoldFont=Heiti SC Light,ItalicFont=Kaiti SC, BoldItalicFont=Kaiti SC Bold] % MacOS 
+%\setCJKmainfont{Songti SC Light}[BoldFont=Heiti SC Light,ItalicFont=Kaiti SC, BoldItalicFont=Kaiti SC Bold] % MacOS
 
 \begin{document}
-\includepdf[pages={1,2}]{cover.pdf} 
+\includepdf[pages={1,2}]{cover.pdf}
 
 \frontmatter
 {
@@ -33,9 +33,7 @@
 \include{data/chap02}
 \include{data/chap03}
 \include{data/chap04}
-
-\include{data/acknowledgement}
-
+\include{data/conclusion}
 \bibliography{reference/refs}
 
 \backmatter
@@ -43,7 +41,8 @@
 \input{data/appendix}
 \end{appendix}
 
+\include{data/acknowledgement}
 
-\includepdf[pages={1}]{back-cover.pdf} 
+\includepdf[pages={1}]{back-cover.pdf}
 
 \end{document}
