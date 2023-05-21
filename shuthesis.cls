@@ -73,6 +73,7 @@
 \RequirePackage{amsfonts}
 \RequirePackage{mathrsfs}
 \RequirePackage{bm}
+\RequirePackage[T1]{fontenc}
 \RequirePackage{mathtools}
 \RequirePackage{courier}
 \RequirePackage{graphicx}
@@ -246,10 +247,10 @@
 \renewcommand{\bottomfraction}{0.65}
 \renewcommand{\floatpagefraction}{0.60}
 \let\old@tabular\@tabular
-\def\shu@tabular{\dawu[1.5]\old@tabular}
-\DeclareCaptionLabelFormat{shu}{{\dawu[1.5]\heiti #1~\rmfamily #2}}
+\def\shu@tabular{\xiaosi[1.5]\old@tabular}
+\DeclareCaptionLabelFormat{shu}{{\xiaosi[1.5]\heiti #1~\rmfamily\bfseries#2 }}
 \DeclareCaptionLabelSeparator{shu}{\hspace{1em}}
-\DeclareCaptionFont{shu}{\dawu[1.5]}
+\DeclareCaptionFont{shu}{\xiaosi[1.5]\heiti}
 \captionsetup{labelformat=shu,labelsep=shu,font=shu}
 \captionsetup[table]{position=top,belowskip={12bp-\intextsep},aboveskip=6bp}
 \captionsetup[figure]{position=bottom,belowskip={12bp-\intextsep},aboveskip=6bp}
@@ -257,7 +258,7 @@
 \renewcommand{\thesubfigure}{(\alph{subfigure})}
 \renewcommand{\thesubtable}{(\alph{subtable})}
 \let\shu@LT@array\LT@array
-\def\LT@array{\dawu[1.5]\shu@LT@array} % set default font size
+\def\LT@array{\xiaosi[1.5]\shu@LT@array} % set default font size
 \def\shu@title@font{%
   \ifshu@arialtitle\sffamily\else\relax\fi}
 \AtBeginDocument{%
