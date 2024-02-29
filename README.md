@@ -38,7 +38,7 @@
 
 ## 论文信息
 
-你需要在 `main.tex` 的导言区修改你的个人信息，`data/cover.tex` 和 `data/declaration.tex` 不需要进行修改.
+你需要在 `main.tex` 的导言区修改你的个人信息， `data/cover.tex` 和 `data/declaration.tex` 不需要进行修改.
 
 ```tex
 % 下面是论文相关信息的填写：
