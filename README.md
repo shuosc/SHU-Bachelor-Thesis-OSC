@@ -33,3 +33,41 @@
 - 打开 Overleaf，点击创建新项目并上传项目，将zip文件拖入对话框
 - 加载完成后，点击左上角菜单，在编译器处选择 XeLaTeX
 - 按下 Ctrl-S 保存并编译
+
+# 注意事项
+
+## 论文信息
+
+你需要在 `main.tex` 的导言区修改你的个人信息，`data/cover.tex` 和 `data/declaration.tex` 不需要进行修改.
+
+```tex
+% 下面是论文相关信息的填写：
+% 论文题目：
+\newcommand{\iTitle}{基于摸鱼链的隐私保护摸鱼学习技术研究}
+% 学院：
+\newcommand{\iSchool}{摸鱼工程与科学学院}
+% 专业：
+\newcommand{\iMajor}{摸鱼科学与技术}
+% 学号：
+\newcommand{\iStudentNumber}{20122012}
+% 学生姓名：
+\newcommand{\iStudentName}{莫雨}
+% 指导老师：
+\newcommand{\iSupervisorName}{余墨}
+% 起讫时间：
+\newcommand{\iThesisTime}{2024年1月15日起5月24日止}
+```
+
+如果在签字后需要覆盖原创性声明部分，可以增加 pdf 文件后，修改 `main.tex` 文章区起始的代码.
+
+```tex
+% before:
+\include{data/cover}
+\include{data/declaration}
+% 如果需要直接覆盖封面和原创性声明，请将下面一行取消注释，并注释上面两行。
+% \includepdf[pages={1,2}]{cover.pdf}
+
+% after:
+\include{data/cover}
+\includepdf[pages={1}]{declaration.pdf}
+```
