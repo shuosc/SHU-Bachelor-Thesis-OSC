@@ -18,13 +18,33 @@
 %\setCJKmainfont{FandolSong-Regular}[BoldFont=FandolHei-Regular,ItalicFont=FandolKai-Regular] % Linux
 %\setCJKmainfont{Songti SC Light}[BoldFont=Heiti SC Light,ItalicFont=Kaiti SC, BoldItalicFont=Kaiti SC Bold] % MacOS
 
+% 下面是论文相关信息的填写：
+% 论文题目：
+\newcommand{\iTitle}{基于摸鱼链的隐私保护摸鱼学习技术研究}
+% 学院：
+\newcommand{\iSchool}{摸鱼工程与科学学院}
+% 专业：
+\newcommand{\iMajor}{摸鱼科学与技术}
+% 学号：
+\newcommand{\iStudentNumber}{20122012}
+% 学生姓名：
+\newcommand{\iStudentName}{莫雨}
+% 指导老师：
+\newcommand{\iSupervisorName}{余墨}
+% 起讫时间：
+\newcommand{\iThesisTime}{2024年1月15日起5月24日止}
+
 \begin{document}
-\includepdf[pages={1,2}]{cover.pdf}
+\include{data/cover}
+\include{data/declaration}
+% 如果需要直接覆盖封面和原创性声明，请将下面一行取消注释，并注释上面两行。
+% \includepdf[pages={1,2}]{cover.pdf}
 
 \frontmatter
 {
     \hypersetup{linkcolor=black}
     \tableofcontents
+    \thispagestyle{shu@nopagefoot}
 }
 \include{data/abstract}
 
@@ -33,6 +53,7 @@
 \include{data/chap02}
 \include{data/chap03}
 \include{data/chap04}
+\include{data/chap05}
 \include{data/conclusion}
 \bibliography{reference/refs}
 
