@@ -204,14 +204,14 @@
     \renewcommand{\footrulewidth}{0pt}}
 \fancypagestyle{shu@nopagefoot}{%
     \fancyhead{}
-    \fancyhead[LE]{\vspace{2pt}\wuhao 上海大学本科毕业论文（设计）}
-    \fancyhead[LO]{\vspace{2pt}\wuhao 上海大学本科毕业论文（设计）}
+    \fancyhead[LE]{\vspace{2pt}\wuhao 上海大学本科毕业论文 (设计)}
+    \fancyhead[LO]{\vspace{2pt}\wuhao 上海大学本科毕业论文 (设计)}
     \renewcommand{\headrulewidth}{0.72pt}
     \renewcommand{\footrulewidth}{0pt}}
 \fancypagestyle{shu@headings}{%
     \fancyhead{}
-    \fancyhead[LE]{\vspace{2pt}\wuhao 上海大学本科毕业论文（设计）}
-    \fancyhead[LO]{\vspace{2pt}\wuhao 上海大学本科毕业论文（设计）}
+    \fancyhead[LE]{\vspace{2pt}\wuhao 上海大学本科毕业论文 (设计)}
+    \fancyhead[LO]{\vspace{2pt}\wuhao 上海大学本科毕业论文 (设计)}
     \fancyfoot{}
     \fancyfoot[C]{\wuhao\thepage}
     \renewcommand{\headrulewidth}{0.72pt}
@@ -456,8 +456,8 @@
 \newcommand{\shu@committee}{
     \noindent\centerline{\zihao{2} 上海大学} \par
     \vskip1.5cm
-    \erhao[1.5] 本论文经答辩委员会全体委员审查，
-    确认符合上海大学博士学位论文质量要求。\par
+    \erhao[1.5] 本论文经答辩委员会全体委员审查, 
+    确认符合上海大学博士学位论文质量要求. \par
     \vskip3.9cm
     \zihao{-2} 答辩委员会签名:\par
     \vskip1cm
@@ -475,10 +475,10 @@
         \zihao{2}\ifxetex\XBSong\else\bfseries\songti\fi 原创性声明
     \end{center}
     \par\vskip1cm\sihao[1.7]
-    本人声明：所呈交的论文是本人在导师指导下进行的研究工作。
-    除了文中特别加以标注和致谢的地方外，论文中不包含其他人已发表或撰写过
-    的研究成果。参与同一工作的其他同志对本研究所做的任何贡献均已在论文中
-    作了明确的说明并表示了谢意。
+    本人声明：所呈交的论文是本人在导师指导下进行的研究工作. 
+    除了文中特别加以标注和致谢的地方外, 论文中不包含其他人已发表或撰写过
+    的研究成果. 参与同一工作的其他同志对本研究所做的任何贡献均已在论文中
+    作了明确的说明并表示了谢意. 
     \vskip2.3cm
     \hfill 签名: \underline{\hskip3cm}
     日期: \underline{\hskip3cm}\\
@@ -487,8 +487,8 @@
         \zihao{2}\ifxetex\XBSong\else\bfseries\songti\fi 本论文使用授权说明
     \end{center}
     \par\vskip1.1cm
-    本人完全了解上海大学有关保留、使用学位论文的规定。即：学校有权保留论文
-    及送交论文复印件，允许论文被查阅和借阅；学校可以公布论文的全部或部分内容。\par
+    本人完全了解上海大学有关保留、使用学位论文的规定. 即：学校有权保留论文
+    及送交论文复印件, 允许论文被查阅和借阅；学校可以公布论文的全部或部分内容. \par
     ({\ifxetex\XBSong\else\bfseries\songti\fi 保密的论文在解密后应遵守此规定})
     \vskip1.5cm
     \noindent\hfill 签名: \underline{\hskip2.7cm}
