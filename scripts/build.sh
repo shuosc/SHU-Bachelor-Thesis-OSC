@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DEFAULT_FILENAME="main"
-CONTENT_DIR="./contents"
+CONTENT_DIR="contents"
 
 show_usage() {
     echo "Usage:"
@@ -14,16 +14,14 @@ show_usage() {
 
 single_compile() {
     local filename=$1
-    mkdir -p build
-    cp -r $CONTENT_DIR build/
+    mkdir -p build/$CONTENT_DIR
     xelatex -synctex=1 -interaction=nonstopmode -file-line-error -output-directory=build "$filename" || exit 1
     echo "Single compilation completed successfully!"
 }
 
 full_compile() {
     local filename=$1
-    mkdir -p build
-    cp -r $CONTENT_DIR build/
+    mkdir -p build/$CONTENT_DIR
     xelatex -synctex=1 -interaction=nonstopmode -file-line-error -output-directory=build "$filename" || exit 1
     bibtex "build/$filename" || exit 1
     xelatex -synctex=1 -interaction=nonstopmode -file-line-error -output-directory=build "$filename" || exit 1
