@@ -18,3 +18,4 @@
 *.gls
 *.hd
 .vscode
+/build

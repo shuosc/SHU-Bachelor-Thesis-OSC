@@ -1,22 +1,53 @@
 % !Mode:: "TeX:UTF-8"
 \documentclass[type=doctor, openany, pifootnote]{shuthesis}
-% 选项:
+% 选项：
 %  type=[master|doctor],            % 必选
-%  secret,                          % 可选 (如果论文需要保密, 这一项需要打开)
+%  secret,                          % 可选 (如果论文需要保密，这一项需要打开)
 %  pifootnote,                      % 可选（建议打开）
-%  openany|openright,               % 可选 (章首页是右开还是任意开, 默认是右开)
+%  openany|openright,               % 可选 (章首页是右开还是任意开，默认是右开)
 %  nocolor                          % 提交最终版本时请打开此选项
 \usepackage{pdfpages}
 \usepackage{shuthesis}
-\usepackage{times}
 \usepackage{gbt7714}
 \bibliographystyle{gbt7714-numerical}
 \citestyle{super}                   % 默认引用为角标格式，正文格式为\citestyle{numbers}
 
+
 \graphicspath{{figures/}}
 
-%\setCJKmainfont{FandolSong-Regular}[BoldFont=FandolHei-Regular,ItalicFont=FandolKai-Regular] % Linux
-%\setCJKmainfont{Songti SC Light}[BoldFont=Heiti SC Light,ItalicFont=Kaiti SC, BoldItalicFont=Kaiti SC Bold] % MacOS
+% 中文正文字体：
+\setCJKmainfont[
+    ExternalLocation=./fonts/,
+    AutoFakeBold=true,
+    ItalicFont=SimKai.ttf,
+    BoldItalicFont=SimKai.ttf
+]{SimSun.ttf}
+% 中文 sansfont, 主要出现在 section 的标题中：
+\setCJKsansfont[
+    ExternalLocation=./fonts/,
+    AutoFakeBold=true
+]{SimHei.ttf}
+
+
+% 英文正文的字体：
+\setmainfont[
+    BoldFont=Times New Roman Bold,
+    ItalicFont=Times New Roman Italic,
+    BoldItalicFont=Times New Roman Bold Italic
+]{Times New Roman}
+% 英文的 sansfont 主要出现在 section 的标题中 (这里就把 Regular 直接设置为了 TimesNewRoman-Bold):
+\setsansfont[
+    BoldFont=Times New Roman Bold,
+    ItalicFont=Times New Roman Bold Italic,
+    BoldItalicFont=Times New Roman Bold Italic
+]{Times New Roman Bold}
+% 英文的 monofont 主要出现在代码中 (\texttt), 可以根据自己的喜好调整：
+\setmonofont[
+    BoldFont=Times New Roman Bold,
+    ItalicFont=Times New Roman Italic,
+    BoldItalicFont=Times New Roman Bold Italic
+]{Times New Roman}
+
 
 % 下面是论文相关信息的填写：
 % 论文题目：
@@ -32,16 +63,17 @@
 % 指导老师：
 \newcommand{\iSupervisorName}{余墨}
 % 起讫时间：
-\newcommand{\iThesisTime}{2024年1月15日起5月24日止}
+\newcommand{\iThesisTime}{2024 年 1 月 15 日起 5 月 24 日止}
 
 \begin{document}
-\include{data/cover}
-\include{data/declaration}
+\include{contents/cover}
+\include{contents/declaration}
+
 % 如果需要直接覆盖封面和原创性声明，请将下面一行取消注释，并注释上面两行。
 % \includepdf[pages={1,2}]{cover.pdf}
 
 \frontmatter
-\include{data/abstract}
+\include{contents/abstract}
 
 
 {
@@ -52,20 +84,20 @@
 
 
 \mainmatter
-\include{data/chap01}
-\include{data/chap02}
-\include{data/chap03}
-\include{data/chap04}
-\include{data/chap05}
-\include{data/conclusion}
+\include{contents/chap01}
+\include{contents/chap02}
+\include{contents/chap03}
+\include{contents/chap04}
+\include{contents/chap05}
+\include{contents/conclusion}
 \bibliography{reference/refs}
 
 \backmatter
 \begin{appendix}
-\input{data/appendix}
+\input{contents/appendix}
 \end{appendix}
 
-\include{data/acknowledgement}
+\include{contents/acknowledgement}
 
 \includepdf[pages={1}]{back-cover.pdf}
 
