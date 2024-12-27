@@ -67,14 +67,14 @@
 \newcommand{\iThesisTime}{2024 年 1 月 15 日起 5 月 24 日止}
 
 \begin{document}
-\include{src/cover}
-\include{src/declaration}
+\include{contents/cover}
+\include{contents/declaration}
 
 % 如果需要直接覆盖封面和原创性声明，请将下面一行取消注释，并注释上面两行。
 % \includepdf[pages={1,2}]{cover.pdf}
 
 \frontmatter
-\include{src/abstract}
+\include{contents/abstract}
 
 
 {
@@ -85,20 +85,20 @@
 
 
 \mainmatter
-\include{src/chap01}
-\include{src/chap02}
-\include{src/chap03}
-\include{src/chap04}
-\include{src/chap05}
-\include{src/conclusion}
+\include{contents/chap01}
+\include{contents/chap02}
+\include{contents/chap03}
+\include{contents/chap04}
+\include{contents/chap05}
+\include{contents/conclusion}
 \bibliography{reference/refs}
 
 \backmatter
 \begin{appendix}
-\input{src/appendix}
+\input{contents/appendix}
 \end{appendix}
 
-\include{src/acknowledgement}
+\include{contents/acknowledgement}
 
 \includepdf[pages={1}]{back-cover.pdf}
 

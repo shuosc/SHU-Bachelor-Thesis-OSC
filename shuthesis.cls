@@ -204,14 +204,14 @@
     \renewcommand{\footrulewidth}{0pt}}
 \fancypagestyle{shu@nopagefoot}{%
     \fancyhead{}
-    \fancyhead[LE]{\vspace{2pt}\wuhao 上海大学本科毕业论文 (设计)}
-    \fancyhead[LO]{\vspace{2pt}\wuhao 上海大学本科毕业论文 (设计)}
+    \fancyhead[LE]{\vspace{2pt}\wuhao 上海大学本科毕业论文（设计）}
+    \fancyhead[LO]{\vspace{2pt}\wuhao 上海大学本科毕业论文（设计）}
     \renewcommand{\headrulewidth}{0.72pt}
     \renewcommand{\footrulewidth}{0pt}}
 \fancypagestyle{shu@headings}{%
     \fancyhead{}
-    \fancyhead[LE]{\vspace{2pt}\wuhao 上海大学本科毕业论文 (设计)}
-    \fancyhead[LO]{\vspace{2pt}\wuhao 上海大学本科毕业论文 (设计)}
+    \fancyhead[LE]{\vspace{2pt}\wuhao 上海大学本科毕业论文（设计）}
+    \fancyhead[LO]{\vspace{2pt}\wuhao 上海大学本科毕业论文（设计）}
     \fancyfoot{}
     \fancyfoot[C]{\wuhao\thepage}
     \renewcommand{\headrulewidth}{0.72pt}
