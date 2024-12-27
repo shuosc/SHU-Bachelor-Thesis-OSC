@@ -1,36 +1,36 @@
 % !Mode:: "TeX:UTF-8"
 \documentclass[type=doctor, openany, pifootnote]{shuthesis}
-% 选项:
+% 选项：
 %  type=[master|doctor],            % 必选
-%  secret,                          % 可选 (如果论文需要保密, 这一项需要打开)
+%  secret,                          % 可选 (如果论文需要保密，这一项需要打开)
 %  pifootnote,                      % 可选（建议打开）
-%  openany|openright,               % 可选 (章首页是右开还是任意开, 默认是右开)
+%  openany|openright,               % 可选 (章首页是右开还是任意开，默认是右开)
 %  nocolor                          % 提交最终版本时请打开此选项
 \usepackage{pdfpages}
 \usepackage{shuthesis}
 \usepackage{times}
 \usepackage{gbt7714}
 \bibliographystyle{gbt7714-numerical}
-\citestyle{super}                   % 默认引用为角标格式, 正文格式为\citestyle{numbers}
+\citestyle{super}                   % 默认引用为角标格式，正文格式为\citestyle{numbers}
 
 
 \graphicspath{{figures/}}
 
-% 中文正文字体:
+% 中文正文字体：
 \setCJKmainfont[
     ExternalLocation=./fonts/,
     AutoFakeBold=true,
     ItalicFont=SimKai.ttf,
     BoldItalicFont=SimKai.ttf
 ]{SimSun.ttf}
-% 中文 sansfont, 主要出现在 section 的标题中:
+% 中文 sansfont, 主要出现在 section 的标题中：
 \setCJKsansfont[
     ExternalLocation=./fonts/,
     AutoFakeBold=true
 ]{SimHei.ttf}
 
 
-% 英文正文的字体:
+% 英文正文的字体：
 \setmainfont[
     BoldFont=Times New Roman Bold,
     ItalicFont=Times New Roman Italic,
@@ -42,7 +42,7 @@
     ItalicFont=Times New Roman Bold Italic,
     BoldItalicFont=Times New Roman Bold Italic
 ]{Times New Roman Bold}
-% 英文的 monofont 主要出现在代码中 (\texttt), 可以根据自己的喜好调整:
+% 英文的 monofont 主要出现在代码中 (\texttt), 可以根据自己的喜好调整：
 \setmonofont[
     BoldFont=Times New Roman Bold,
     ItalicFont=Times New Roman Italic,
@@ -64,13 +64,13 @@
 % 指导老师：
 \newcommand{\iSupervisorName}{余墨}
 % 起讫时间：
-\newcommand{\iThesisTime}{2024年1月15日起5月24日止}
+\newcommand{\iThesisTime}{2024 年 1 月 15 日起 5 月 24 日止}
 
 \begin{document}
 \include{src/cover}
 \include{src/declaration}
 
-% 如果需要直接覆盖封面和原创性声明, 请将下面一行取消注释, 并注释上面两行. 
+% 如果需要直接覆盖封面和原创性声明，请将下面一行取消注释，并注释上面两行。
 % \includepdf[pages={1,2}]{cover.pdf}
 
 \frontmatter
