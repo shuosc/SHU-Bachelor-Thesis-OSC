@@ -1,10 +1,10 @@
-# SHU Bachelor Thesis OSC v3.x
+# SHU Bachelor Thesis OSC
+
+上海大学本科生毕业论文 latex 模板-开源社区版本。 
 
 ## 1. 关于 SHU-Bachelor-Thesis-OSC
 
-本模板是上海大学本科生毕业论文 latex 模板 - 开源社区版本。
-
-此模板基于[SHU-Bachelor-Thesis](https://github.com/alfredbowenfeng/SHU-Bachelor-Thesis)修改得来。
+本模板基于[SHU-Bachelor-Thesis](https://github.com/alfredbowenfeng/SHU-Bachelor-Thesis)修改得来。
 
 本身[SHU-Bachelor-Thesis](https://github.com/alfredbowenfeng/SHU-Bachelor-Thesis)又是由 [ShuThesis](https://github.com/ahhylau/shuthesis)修改得来的。后者是一个支持上海大学硕士和博士毕业论文的 latex 模板，前者对其进行了一定的改进，但是还有诸多遗留问题。
 
@@ -40,9 +40,7 @@
 
 ### 3.2. Overleaf
 
-- 下载本模板到本地解压，或 git clone 本模板。
-- 如果使用了 git clone, 删除模板内 (隐藏的) .git 目录：`rm -rf .git`.
-- 将模板压缩为 .zip 文件。
+- 下载 [Release Page](https://github.com/shuosc/SHU-Bachelor-Thesis-OSC/releases) 中最新的 zip 压缩包。
 - 打开 Overleaf, 点击创建新项目并上传项目，将 zip 文件拖入对话框。
 - 加载完成后，点击左上角菜单，在编译器处选择 XeLaTeX.
 - 按下 Ctrl-S 保存并编译。
