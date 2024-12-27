@@ -14,42 +14,29 @@
 
 模板的维护是一个相当考验细节处理的工作，欢迎 pull requests. 作者会尽可能尽快处理。
 
-## 2. TODO List
 
-- [x] 重构项目目录。
-- [ ] 更新 README.md 和相关文档，匹配 v3.x.
-- [x] 增加 bash 编译脚本。
-- [ ] 增加 bat 编译脚本。
-- [ ] 增加 ps1 编译脚本。
-- [ ] 增加 CI: Build Check.
-- [x] 增加 CD: Release.
-- [ ] Windows + Latex 环境配置文档。
-- [ ] Windows + WSL + Docker + Latex 环境配置文档。
-- [ ] Mac + Latex 环境配置文档。
-- [ ] VSCode 开发环境集成文档。
+## 2. 使用步骤
 
-## 3. 使用步骤
-
-### 3.1. 本地
+### 2.1. 本地
 
 - 本地安装 Latex.
 - 下载本模板到本地解压，或 clone 本模板。
-- 修改 data 文件夹下的.tex 文件，编辑论文内容。
+- 修改 [contents](./contents/) 文件夹下的 .tex 文件，编辑论文内容。
 - 通过根目录下的 main.tex 文件添加或删去章节。
 - 编译：`bash scripts/build.sh xebib`.
 
-### 3.2. Overleaf
+### 2.2. Overleaf
 
 - 下载 [Release Page](https://github.com/shuosc/SHU-Bachelor-Thesis-OSC/releases) 中最新的 zip 压缩包。
 - 打开 Overleaf, 点击创建新项目并上传项目，将 zip 文件拖入对话框。
 - 加载完成后，点击左上角菜单，在编译器处选择 XeLaTeX.
 - 按下 Ctrl-S 保存并编译。
 
-## 4. 注意事项
+## 3. 注意事项
 
-### 4.1. 论文信息
+### 3.1. 论文信息
 
-你需要在 `main.tex` 的导言区修改你的个人信息， `data/cover.tex` 和 `data/declaration.tex` 不需要进行修改。
+你需要在 `main.tex` 的导言区修改你的个人信息， `contents/cover.tex` 和 `contents/declaration.tex` 不需要进行修改。
 
 ```tex
 % 下面是论文相关信息的填写：
