@@ -31,7 +31,7 @@
 - 修改 [contents](./contents/) 文件夹下的 .tex 文件，编辑论文内容。
 - 通过更改根目录下的 main.tex 文件添加或删去章节。
 - 终端编译命令：`bash scripts/build.sh xebib`.
-- 如果想使用 vscode 作为集成开发环境, 请参考: [Work with VSCode](./docs/work-with-vscode.md).
+- 如果想使用 vscode 作为集成开发环境, 请参考: [Wiki: Work with VSCode](https://github.com/shuosc/SHU-Bachelor-Thesis-OSC/wiki/Work-with-VSCode).
 
 ## 3. 注意事项
 
