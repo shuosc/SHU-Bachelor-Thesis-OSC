@@ -12,25 +12,26 @@
 
 感谢前面几位同学的工作和开源精神。希望本模板能帮助到本科生同学，希望越来越多的同学能加入到开源社区大家庭。
 
-模板的维护是一个相当考验细节处理的工作，欢迎 pull requests. 作者会尽可能尽快处理。
+模板的维护是一个相当考验细节处理的工作，欢迎 Pull Requests. 作者会尽可能尽快处理。
 
 
 ## 2. 使用步骤
 
-### 2.1. 本地
-
-- 本地安装 Latex.
-- 下载本模板到本地解压，或 clone 本模板。
-- 修改 [contents](./contents/) 文件夹下的 .tex 文件，编辑论文内容。
-- 通过根目录下的 main.tex 文件添加或删去章节。
-- 编译：`bash scripts/build.sh xebib`.
-
-### 2.2. Overleaf
+### 2.1. Overleaf
 
 - 下载 [Release Page](https://github.com/shuosc/SHU-Bachelor-Thesis-OSC/releases) 中最新的 zip 压缩包。
 - 打开 Overleaf, 点击创建新项目并上传项目，将 zip 文件拖入对话框。
 - 加载完成后，点击左上角菜单，在编译器处选择 XeLaTeX.
 - 按下 Ctrl-S 保存并编译。
+
+### 2.2. 本地
+
+- 本地安装 Latex.
+- 下载 [Release Page](https://github.com/shuosc/SHU-Bachelor-Thesis-OSC/releases) 中最新的 zip 压缩包到本地解压，或 clone 本模板。
+- 修改 [contents](./contents/) 文件夹下的 .tex 文件，编辑论文内容。
+- 通过更改根目录下的 main.tex 文件添加或删去章节。
+- 终端编译命令：`bash scripts/build.sh xebib`.
+- 如果想使用 vscode 作为集成开发环境, 请参考: [Wiki: Work with VSCode](https://github.com/shuosc/SHU-Bachelor-Thesis-OSC/wiki/Work-with-VSCode).
 
 ## 3. 注意事项
 
