@@ -6,11 +6,18 @@ labels: enhancement
 assignees: ''
 ---
 
-### 需求描述
-<!-- 清晰简洁地描述你想要什么功能 -->
+## 1. Feature Description
 
-### 解决方案
-<!-- 描述你期望的解决方案 -->
+<!-- A clear and concise description of what the feature is. -->
 
-### 其他信息
-<!-- 其他相关的信息或截图 -->
+## 2. Motivation
+
+<!-- Why do you think this feature is important? -->
+
+## 3. Possible Implementation
+
+<!-- Any idea on how to implement this feature? -->
+
+## 4. Additional Context
+
+<!-- Add any other context or screenshots about the feature request here. -->

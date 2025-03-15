@@ -6,29 +6,47 @@ labels: bug
 assignees: ''
 ---
 
-### Bug 描述
-<!-- 简明扼要地描述这个bug -->
+## 1. Bug Description
 
-### 复现步骤
+<!-- 
+A clear and concise description of what the bug is. 
+-->
 
-1. 第一步
-2. 第二步
-3. ...
+## 2. Steps to Reproduce
 
+<!-- 
+Steps to reproduce the behavior; For example:
 
-### 预期行为
-<!-- 描述你期望发生的事情 -->
+1. Clone the repository, switch to commit abcde11
+2. Compile with command `...`
+3. Run with command `....`
+4. See error
+-->
 
-### 实际行为
-<!-- 描述实际发生的事情 -->
+## 3. Expected Behavior
 
-### 截图
-<!-- 如果有的话，添加截图 -->
+<!-- A clear and concise description of what you expected to happen. -->
 
-### 环境信息
-- 操作系统：[例如 Windows11]
-- TeX 发行版：[例如 TeXLive]
-- 版本：[例如 2024]
+## 4. Screenshots
 
-### 其他信息
-<!-- 其他需要补充的信息 -->
+<!-- If applicable, add screenshots to help explain your problem. -->
+
+## 5. Environment
+
+<!--
+For example:
+
+| Software             | Version        |
+| -------------------- | -------------- |
+| OS / Docker Image    | Windows 11     |
+| Tex                  | TexLive 2024   |
+-->
+
+| Software             | Version        |
+| -------------------- | -------------- |
+| OS / Docker Image    |                |
+| Tex                  |                |
+
+## 6. Additional Context
+
+<!-- Add any other context about the problem here. -->

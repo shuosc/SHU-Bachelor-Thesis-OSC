@@ -2,12 +2,20 @@
 name: 📚 Documentation
 about: Request or enhancement to current documentations
 title: "[DOC] "
-labels: doc
+labels: documentation 
 assignees: ''
 ---
 
-### 文档位置
-<!-- 指出需要改进的文档位置 -->
+## 1. Suggestions
 
-### 改进建议
-<!-- 描述你的建议 -->
+<!--- The documentation changes you'd like to see. -->
+
+## 2. Location
+
+<!--- Where should the changes be made? -->
+
+## 3. Additional Context
+
+<!--- 
+Add any other context or screenshots about the documentation request here.
+-->
