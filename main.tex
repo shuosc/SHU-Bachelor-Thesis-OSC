@@ -78,20 +78,41 @@
     }
 \makeatother
 
+%========设置各级标题格式========
+% 英文正文的字体：
+\setmainfont[
+    BoldFont=Times New Roman Bold,
+    ItalicFont=Times New Roman Italic,
+    BoldItalicFont=Times New Roman Bold Italic
+]{Times New Roman}
+% 英文的 sansfont 主要出现在 section 的标题中 (这里就把 Regular 直接设置为了 TimesNewRoman-Bold):
+\setsansfont[
+    BoldFont=Times New Roman Bold,
+    ItalicFont=Times New Roman Bold Italic,
+    BoldItalicFont=Times New Roman Bold Italic
+]{Times New Roman Bold}
+% 英文的 monofont 主要出现在代码中 (\texttt), 可以根据自己的喜好调整：
+\setmonofont[
+    BoldFont=Times New Roman Bold,
+    ItalicFont=Times New Roman Italic,
+    BoldItalicFont=Times New Roman Bold Italic
+]{Times New Roman}
+
 \graphicspath{{figures/}}
 
-% 中文正文字体：
-\setCJKmainfont[
-    ExternalLocation=./fonts/,
-    AutoFakeBold=true,
-    ItalicFont=SimKai.ttf,
-    BoldItalicFont=SimKai.ttf
-]{SimSun.ttf}
-% 中文 sansfont, 主要出现在 section 的标题中：
-\setCJKsansfont[
-    ExternalLocation=./fonts/,
-    AutoFakeBold=true
-]{SimHei.ttf}
+% 如果出现中文无法显示就请取消注释或者注释
+% % 中文正文字体：
+% \setCJKmainfont[
+%     ExternalLocation=./fonts/,
+%     AutoFakeBold=true,
+%     ItalicFont=SimKai.ttf,
+%     BoldItalicFont=SimKai.ttf
+% ]{SimSun.ttf}
+% % 中文 sansfont, 主要出现在 section 的标题中：
+% \setCJKsansfont[
+%     ExternalLocation=./fonts/,
+%     AutoFakeBold=true
+% ]{SimHei.ttf}
 
 
 % 下面是论文相关信息的填写：
