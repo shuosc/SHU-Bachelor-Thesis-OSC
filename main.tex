@@ -1,34 +1,84 @@
-% !Mode:: "TeX:UTF-8"
 \documentclass[type=doctor, openany, pifootnote]{shuthesis}
-% 选项：
+% 选项:
 %  type=[master|doctor],            % 必选
-%  secret,                          % 可选 (如果论文需要保密，这一项需要打开)
+%  secret,                          % 可选 (如果论文需要保密, 这一项需要打开)
 %  pifootnote,                      % 可选（建议打开）
-%  openany|openright,               % 可选 (章首页是右开还是任意开，默认是右开)
+%  openany|openright,               % 可选 (章首页是右开还是任意开, 默认是右开)
 %  nocolor                          % 提交最终版本时请打开此选项
+% Use the postscript times font!
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode} % algorithmicx 的伪代码扩展
 \usepackage{pdfpages}
 \usepackage{shuthesis}
+\usepackage{times}
+
+
+%========设置引用格式========
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{etoolbox}
+% 设置参考文献格式
+\AtBeginEnvironment{thebibliography}{%
+    \zihao{-4} % 设置字体大小为小四号
+    \setstretch{1.5} % 设置行距为 23 磅
+    \setlength{\parindent}{0pt} % 取消段落缩进
+    \setlength{\hangindent}{1.27cm} % 设置悬挂缩进
+    \justifying % 设置两端对齐
+}
 \usepackage{gbt7714}
 \bibliographystyle{gbt7714-numerical}
 \citestyle{super}                   % 默认引用为角标格式，正文格式为\citestyle{numbers}
 
 
-\graphicspath{{figures/}}
+%========设置表格式========
+\usepackage{ctex}
+\usepackage{caption}
+\usepackage{array}
 
-% 中文正文字体：
-\setCJKmainfont[
-    ExternalLocation=./fonts/,
-    AutoFakeBold=true,
-    ItalicFont=SimKai.ttf,
-    BoldItalicFont=SimKai.ttf
-]{SimSun.ttf}
-% 中文 sansfont, 主要出现在 section 的标题中：
-\setCJKsansfont[
-    ExternalLocation=./fonts/,
-    AutoFakeBold=true
-]{SimHei.ttf}
+% 设置表标题格式
+% 设置表标题格式
+\captionsetup[table]{
+    labelfont={\zihao{-4}}, % 编号字体：黑体小四号粗体
+    textfont={\zihao{-4}},   % 表标题数字及字母为 Times New Roman 粗体小四号
+    labelsep=space,            % 标签与标题之间的间距
+    justification=centering,   % 标题居中
+    singlelinecheck=off        % 防止单行标题自动居中
+}
 
+% 设置表格内容格式
+\newcolumntype{L}{>{\zihao{5}\songti}l} % 左对齐，宋体五号
+\newcolumntype{C}{>{\zihao{5}\songti}c} % 居中对齐，宋体五号
+\newcolumntype{R}{>{\zihao{5}\songti}r} % 右对齐，宋体五号
 
+%========设置图格式========
+% 设置图格式
+\captionsetup[figure]{
+    labelfont={\zihao{-4}}, % 编号字体：黑体小四号粗体
+    textfont={\zihao{-4}},   % 图标题数字及字母为 Times New Roman 粗体小四号
+    labelsep=space,            % 标签与标题之间的间距
+    justification=centering,   % 标题居中
+    singlelinecheck=off        % 防止单行标题自动居中
+}
+
+%========设置目录格式========
+% 修改目录格式
+\makeatletter
+\renewcommand*\l@subsection[2]{%
+    \@dottedtocline{2}{2.5em}{2.5em}{{\xiaosi #1}}{#2}
+    }
+\renewcommand*\l@section[2]{%
+    \@dottedtocline{1}{1.0em}{2.3em}{{\sihao #1}}{#2}
+    }
+\renewcommand*\l@chapter[2]{%
+    \vspace{5pt}% 增加 10pt 的垂直间距
+    \@dottedtocline{0}{0em}{0em}{{\heiti\sihao {#1}}}{{#2}}
+    \vspace{5pt}% 增加 10pt 的垂直间距
+    }
+\makeatother
+
+%========设置各级标题格式========
 % 英文正文的字体：
 \setmainfont[
     BoldFont=Times New Roman Bold,
@@ -47,6 +97,22 @@
     ItalicFont=Times New Roman Italic,
     BoldItalicFont=Times New Roman Bold Italic
 ]{Times New Roman}
+
+\graphicspath{{figures/}}
+
+% 如果出现中文无法显示就请取消注释或者注释
+% % 中文正文字体：
+% \setCJKmainfont[
+%     ExternalLocation=./fonts/,
+%     AutoFakeBold=true,
+%     ItalicFont=SimKai.ttf,
+%     BoldItalicFont=SimKai.ttf
+% ]{SimSun.ttf}
+% % 中文 sansfont, 主要出现在 section 的标题中：
+% \setCJKsansfont[
+%     ExternalLocation=./fonts/,
+%     AutoFakeBold=true
+% ]{SimHei.ttf}
 
 
 % 下面是论文相关信息的填写：
