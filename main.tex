@@ -138,14 +138,17 @@
 % 如果需要直接覆盖封面和原创性声明，请将下面一行取消注释，并注释上面两行。
 % \includepdf[pages={1,2}]{cover.pdf}
 
-\frontmatter
-\include{contents/abstract}
+{
+    \pagenumbering{Roman}
+    \pagestyle{shu@headings}
+    \include{contents/abstract}
+}
 
 
 {
     \hypersetup{linkcolor=black}
+    \pagenumbering{gobble}
     \tableofcontents
-    \thispagestyle{shu@nopagefoot}
 }
 
 
