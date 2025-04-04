@@ -8,11 +8,12 @@ ENV LANGUAGE=en_US.UTF-8
 ENV LANG=en_US.UTF-8
 
 RUN apt-get update && apt-get upgrade -y && \
-    apt-get install -y git apt-utils wget curl
+    apt-get install -y git apt-utils wget curl software-properties-common ssh
 
-RUN echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula \
-    select true | debconf-set-selections && \
-    apt-get install -y ttf-mscorefonts-installer
+RUN apt-add-repository contrib && apt-get update && apt-get install -y \
+    ttf-mscorefonts-installer && fc-cache -f -v
+
+RUN fmtutil-sys --all
 
 RUN apt-get update && apt-get upgrade -y && apt-get autoremove -y && \
     apt-get clean && rm -rf /var/lib/apt/lists/* && \

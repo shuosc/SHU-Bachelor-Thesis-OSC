@@ -45,7 +45,9 @@ jobs:
           prerelease: false
 
       - name: Archive Repository
-        run: zip -r shu_bachelor_thesis_osc.zip . -x '.git/*' '.github/*' '.git*' 
+        run: |
+          zip -r shu_bachelor_thesis_osc.zip . -x '.git/*' '.github/*' \
+            '.git*' '.vscode*' 'scripts/docker/*'
 
       - name: Upload Release Asset
         uses: actions/upload-release-asset@v1

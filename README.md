@@ -26,7 +26,7 @@
 
 ### 2.2. 本地
 
-- 本地安装 Latex.
+- 本地安装 Latex (或者起 docker 容器: `bash scripts/docker/run.sh`, 详见 [scripts/docker](scripts/docker)).
 - 下载 [Release Page](https://github.com/shuosc/SHU-Bachelor-Thesis-OSC/releases) 中最新的 zip 压缩包到本地解压，或 clone 本模板。
 - 修改 [contents](./contents/) 文件夹下的 .tex 文件，编辑论文内容。
 - 通过更改根目录下的 main.tex 文件添加或删去章节。
