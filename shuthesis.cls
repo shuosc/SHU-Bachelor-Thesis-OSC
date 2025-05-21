@@ -608,7 +608,8 @@
 \let\l@table\l@figure
 \renewenvironment{thebibliography}[1]{%
     \shu@chapter*{\bibname}%
-    \wuhao[1.5]
+    \xiaosi
+    \setlength{\baselineskip}{23pt}
     \list{\@biblabel{\@arabic\c@enumiv}}%
     {\renewcommand{\makelabel}[1]{##1\hfill}
         \settowidth\labelwidth{1.1cm}
