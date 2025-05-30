@@ -2,6 +2,8 @@
 
 上海大学本科生毕业论文 latex 模板-开源社区版本。 
 
+> 📢 相比 latex 模板, 更推荐使用 [上海大学本科生毕业论文 Typst 模板 - 上海大学开源社区版 (SHUOSC)](https://github.com/shuosc/SHU-Bachelor-Thesis-Typst).
+
 ## 1. 关于 SHU-Bachelor-Thesis-OSC
 
 本模板基于[SHU-Bachelor-Thesis](https://github.com/alfredbowenfeng/SHU-Bachelor-Thesis)修改得来。
